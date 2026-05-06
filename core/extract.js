@@ -27,18 +27,32 @@ fs.mkdirSync(pngDir, { recursive: true });
     .filter(f => f.endsWith('.html'))
     .sort();
 
-  for (const file of files) {
+  for (let i = 0; i < files.length; i++) {
+    const file = files[i];
     const htmlPath = path.resolve(slidesDir, file);
     const pngPath = path.join(pngDir, file.replace('.html', '.png'));
 
     await page.goto(`file:///${htmlPath.replace(/\\/g, '/')}`, { waitUntil: 'domcontentloaded' });
-    await new Promise(r => setTimeout(r, 500));
-    const dim = await page.evaluate(() => {
+    await new Promise(r => setTimeout(r, i === 0 ? 500 : 150));
+    const { dim, overflowPx } = await page.evaluate(() => {
       const c = document.querySelector('.canvas');
-      return { width: c.offsetWidth, height: c.offsetHeight };
+      const footer = document.querySelector('.footer');
+      const content = document.querySelector('.content-group, .outer');
+      const dim = { width: c.offsetWidth, height: c.offsetHeight };
+      let overflowPx = null;
+      if (footer && content) {
+        const footerTop = footer.getBoundingClientRect().top;
+        const contentBottom = content.getBoundingClientRect().bottom;
+        if (contentBottom > footerTop) overflowPx = Math.ceil(contentBottom - footerTop);
+      }
+      return { dim, overflowPx };
     });
     await page.screenshot({ path: pngPath, clip: { x: 0, y: 0, width: dim.width, height: dim.height } });
-    console.log(`  ${file.replace('.html', '.png')} (${dim.width}×${dim.height})`);
+    if (overflowPx) {
+      console.log(`  ⚠️  ${file} — footer 침범 ${overflowPx}px OVERFLOW`);
+    } else {
+      console.log(`  ✅ ${file.replace('.html', '.png')} (${dim.width}×${dim.height})`);
+    }
   }
 
   await browser.close();

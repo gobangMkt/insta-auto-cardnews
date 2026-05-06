@@ -11,11 +11,11 @@
     font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
     background:#F8FAFD;
   }
-  .outer {
+  .content-group {
     position:absolute;
     width:936.08px; height:auto;
     left:72.02px; top:115.22px;
-    display:flex; flex-direction:column; align-items:flex-start; gap:45.25px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:43.44px;
   }
   .headline {
     display:flex; flex-direction:row; align-items:center; gap:14.48px;
@@ -32,45 +32,51 @@
   }
   .content-divider {
     width:100%; height:9.05px;
-    background:#DAE2ED;
-    flex-shrink:0;
+    background:#DAE2ED; flex-shrink:0;
   }
-  .slide-img {
-    width:934px; height:423.54px;
-    border-radius:27.15px;
-    object-fit:cover;
-    background:#D9D9D9;
-    flex-shrink:0;
-  }
-  .content-group {
-    display:flex; flex-direction:column; align-items:flex-start; gap:20px;
-    width:933.96px;
+  .paragraphs {
+    display:flex; flex-direction:column; align-items:flex-start; gap:43.44px;
+    width:936.08px;
   }
   .paragraph {
     display:flex; flex-direction:column; align-items:flex-start; gap:18.1px;
-    width:933.96px;
+    width:936.08px;
   }
   .item-row {
     display:flex; flex-direction:row; align-items:center; gap:18.1px;
+    width:936.08px;
   }
   .rank-badge {
     min-width:81.45px; height:65.16px;
     background:rgba(0,154,181,0.2); border-radius:18.1px;
     display:inline-flex; align-items:center; justify-content:center;
-    padding:0 16px;
+    padding:0 16px; flex-shrink:0;
     font-weight:700; font-size:43.44px;
     letter-spacing:-0.02em; color:#1E2124;
   }
   .group-title {
-    width:933.96px;
     font-weight:700; font-size:43.44px; line-height:150%;
     letter-spacing:-0.02em; color:#1E2124;
   }
   .body {
-    width:933.96px;
+    width:936.08px;
     font-weight:400; font-size:43.44px; line-height:150%;
     letter-spacing:-0.02em; color:#1E2124;
   }
+  .bullets {
+    display:flex; flex-direction:column; gap:9.05px;
+    width:936.08px; padding-left:18.1px;
+  }
+  .bullet-item {
+    position:relative; padding-left:32.41px;
+    font-weight:400; font-size:39.61px; line-height:140%;
+    letter-spacing:-0.02em; color:#1E2124;
+  }
+  .bullet-item::before {
+    content:'•'; position:absolute;
+    left:0; top:0; font-weight:700; color:#1E2124;
+  }
+  .bullet-item b { font-weight:700; }
   .highlight { color:#009AB5; font-weight:700; }
   .footer {
     position:absolute; width:936.08px; height:61.41px;
@@ -89,27 +95,35 @@
 </head>
 <body>
 <div class="canvas">
-  <div class="outer">
+  <div class="content-group">
     <div class="headline">
-      <div class="hl-icon">⚠️</div>
-      <div class="hl-text">이것만은 꼭 기억하세요</div>
+      <div class="hl-icon">📊</div>
+      <div class="hl-text">왜 해지가 늘었나요?</div>
     </div>
     <div class="content-divider"></div>
-    <img class="slide-img" src="../img/a3b28d16-ef6d-4b59-b70e-90042a8bd42e.webp" alt="">
-    <div class="content-group">
+    <div class="paragraphs">
       <div class="paragraph">
         <div class="item-row">
-          <div class="rank-badge">주의 1</div>
-          <div class="group-title">1차 완료 시 2차 신청 불가</div>
+          <div class="rank-badge">원인①</div>
+          <div class="group-title">3단 콤보가 동시에 터졌어요</div>
         </div>
-        <div class="body">1차를 받았다면 <span class="highlight">2차엔 신청 자체가 안 돼요.</span> 중복 신청은 불가예요.</div>
+        <div class="body">고금리·고분양가·대출 규제라는 세 악재가 한꺼번에 겹쳤어요. <span class="highlight">당첨돼도 자금을 못 맞추는 상황</span>이 생기면서 포기가 늘었어요.</div>
+        <div class="bullets">
+          <div class="bullet-item"><b>고금리:</b> 모기지 이자 부담 급증</div>
+          <div class="bullet-item"><b>고분양가:</b> 청약 자금 필요액 증가</div>
+          <div class="bullet-item"><b>대출 규제:</b> 자금 조달 경로 축소</div>
+        </div>
       </div>
       <div class="paragraph">
         <div class="item-row">
-          <div class="rank-badge">주의 2</div>
-          <div class="group-title">8월 31일 이후엔 소멸</div>
+          <div class="rank-badge">원인②</div>
+          <div class="group-title">로또 청약 기대감이 꺾였어요</div>
         </div>
-        <div class="body"><span class="highlight">2026.8.31까지</span> 쓰지 않으면 사라져요. 기한 전에 꼭 사용하세요.</div>
+        <div class="body">분양가 상승으로 <span class="highlight">시세 차익이 줄었어요</span>. 저렴하게 내 집을 마련하는 공식이 흔들리고 있어요.</div>
+        <div class="bullets">
+          <div class="bullet-item"><b>분양가↑:</b> 시세와 격차 축소</div>
+          <div class="bullet-item"><b>당첨 후:</b> 실입주 자금 부담 증가</div>
+        </div>
       </div>
     </div>
   </div>

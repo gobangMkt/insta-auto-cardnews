@@ -12,10 +12,9 @@
     background:#F8FAFD;
   }
   .content-group {
-    position:absolute;
-    width:936.08px; height:auto;
+    position:absolute; width:936.08px; height:auto;
     left:72.02px; top:115.22px;
-    display:flex; flex-direction:column; align-items:flex-start; gap:57.92px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:43.44px;
   }
   .headline {
     display:flex; flex-direction:row; align-items:flex-start; gap:14.48px;
@@ -35,7 +34,7 @@
     background:#DAE2ED; flex-shrink:0;
   }
   .paragraph {
-    display:flex; flex-direction:column; align-items:flex-start; gap:57.92px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:63.35px;
     width:936.08px;
   }
   .body-text {
@@ -43,28 +42,31 @@
     font-weight:400; font-size:43.44px; line-height:140%;
     letter-spacing:-0.02em; color:#1E2124;
   }
-  .cell-img {
-    width:924.91px; height:423.54px;
-    border-radius:27.15px;
-    object-fit:cover;
-    background:#D9D9D9;
-    flex-shrink:0;
+  .highlight { color:#009AB5; font-weight:700; }
+  .callout {
+    width:936.08px;
+    display:flex; flex-direction:column; justify-content:center; align-items:flex-start;
+    padding:43.21px 43.21px 46.81px; gap:14.41px;
+    background:#E6F5EC; border-radius:21.6px;
   }
-  .bullets {
-    display:flex; flex-direction:column; gap:9.05px;
-    width:936.08px; padding-left:18.1px;
+  .callout-title {
+    display:flex; flex-direction:row; align-items:center; gap:14.41px; width:100%;
   }
-  .bullet-item {
-    position:relative; padding-left:32.41px;
-    font-weight:400; font-size:39.61px; line-height:140%;
+  .callout-check {
+    width:50.41px; height:50.41px; flex-shrink:0;
+    background:#29BA66; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    color:#FFFFFF; font-size:28px; font-weight:700;
+  }
+  .callout-title-text {
+    font-weight:700; font-size:38.71px; line-height:160%;
     letter-spacing:-0.02em; color:#1E2124;
   }
-  .bullet-item::before {
-    content:'•'; position:absolute;
-    left:0; top:0; font-weight:700; color:#1E2124;
+  .callout-body {
+    width:100%; padding-left:10.8px;
+    font-weight:400; font-size:39.61px; line-height:160%;
+    letter-spacing:-0.02em; color:#1E2124;
   }
-  .bullet-item b { font-weight:700; }
-  .highlight { color:#009AB5; font-weight:700; }
   .footer {
     position:absolute; width:936.08px; height:61.41px;
     left:72.02px; bottom:66.61px;
@@ -84,18 +86,23 @@
 <div class="canvas">
   <div class="content-group">
     <div class="headline">
-      <div class="hl-icon">📱</div>
+      <div class="hl-icon">📌</div>
       <div class="headline-text">어디서 신청하나요?</div>
     </div>
     <div class="content-divider"></div>
     <div class="paragraph">
-      <p class="body-text">온라인·오프라인 두 경로로 신청할 수 있어요. <span class="highlight">편한 방법을 골라서</span> 신청하면 돼요.</p>
-      <img class="cell-img" src="../img/3bc75bf7-ce10-48df-b4e3-9caabfe9c84b.webp" alt="">
-      <div class="bullets">
-        <div class="bullet-item"><b>온라인:</b> 지역사랑상품권 앱 / 카드사 홈페이지·앱·콜센터·ARS</div>
-        <div class="bullet-item"><b>오프라인:</b> 주소지 관할 읍면동 주민센터 / 제휴 은행 영업점</div>
+      <p class="body-text">이사동행·건강동행·마음 동행, <span class="highlight">세 가지 모두 같은 창구</span>에서 신청할 수 있어요. 온라인이나 전화 중 편한 방법을 선택하면 돼요.</p>
+      <div class="callout">
+        <div class="callout-title">
+          <div class="callout-check">✓</div>
+          <div class="callout-title-text">신청 창구</div>
+        </div>
+        <div class="callout-body">
+          · 서울 1인가구 포털: 1in.seoul.go.kr<br>
+          · 일인 친구 콜센터: 1533-1179
+        </div>
       </div>
-      <p class="body-text">스마트폰이 어렵다면 <span class="highlight">주민센터에 직접 방문</span>해도 돼요.</p>
+      <p class="body-text">필요한 날, <span class="highlight">바로 연락</span>해보세요.</p>
     </div>
   </div>
   <div class="footer">

@@ -12,13 +12,12 @@
     background:#F8FAFD;
   }
   .content-group {
-    position:absolute;
-    width:936.08px; height:auto;
+    position:absolute; width:936.08px; height:auto;
     left:72.02px; top:115.22px;
-    display:flex; flex-direction:column; align-items:flex-start; gap:57.92px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:43.44px;
   }
   .headline {
-    display:flex; flex-direction:row; align-items:flex-start; gap:14.48px;
+    display:flex; flex-direction:row; align-items:center; gap:14.48px;
     width:933.96px;
   }
   .hl-icon {
@@ -34,37 +33,41 @@
     width:100%; height:9.05px;
     background:#DAE2ED; flex-shrink:0;
   }
-  .paragraph {
-    display:flex; flex-direction:column; align-items:flex-start; gap:57.92px;
-    width:936.08px;
-  }
   .body-text {
     width:936.08px;
-    font-weight:400; font-size:43.44px; line-height:140%;
-    letter-spacing:-0.02em; color:#1E2124;
-  }
-  .cell-img {
-    width:924.91px; height:423.54px;
-    border-radius:27.15px;
-    object-fit:cover;
-    background:#D9D9D9;
-    flex-shrink:0;
-  }
-  .bullets {
-    display:flex; flex-direction:column; gap:9.05px;
-    width:936.08px; padding-left:18.1px;
-  }
-  .bullet-item {
-    position:relative; padding-left:32.41px;
     font-weight:400; font-size:39.61px; line-height:140%;
     letter-spacing:-0.02em; color:#1E2124;
   }
-  .bullet-item::before {
-    content:'•'; position:absolute;
-    left:0; top:0; font-weight:700; color:#1E2124;
-  }
-  .bullet-item b { font-weight:700; }
   .highlight { color:#009AB5; font-weight:700; }
+  .data-table {
+    width:936.08px;
+    border-collapse:collapse;
+    border-radius:18.1px; overflow:hidden;
+    background:#FFFFFF;
+    border:1.79px solid #DAE2ED;
+  }
+  .data-table th, .data-table td {
+    padding:21.6px 28.91px;
+    border-bottom:1.79px solid #DAE2ED;
+    text-align:left; vertical-align:middle;
+    letter-spacing:-0.02em;
+  }
+  .data-table tr:last-child th, .data-table tr:last-child td { border-bottom:none; }
+  .data-table thead th {
+    background:#EEF2F7;
+    font-weight:700; font-size:34.21px; line-height:140%;
+    color:#1E2124;
+  }
+  .data-table tbody th {
+    width:200px;
+    font-weight:700; font-size:34.21px; line-height:140%;
+    color:#1E2124;
+    background:#FFFFFF;
+  }
+  .data-table tbody td {
+    font-weight:400; font-size:34.21px; line-height:140%;
+    color:#1E2124;
+  }
   .footer {
     position:absolute; width:936.08px; height:61.41px;
     left:72.02px; bottom:66.61px;
@@ -85,19 +88,33 @@
   <div class="content-group">
     <div class="headline">
       <div class="hl-icon">💰</div>
-      <div class="headline-text">나는 얼마 받을 수 있어요?</div>
+      <div class="headline-text">건강동행 이용 요금이에요</div>
     </div>
     <div class="content-divider"></div>
-    <div class="paragraph">
-      <p class="body-text">소득 계층·거주 지역에 따라 <span class="highlight">비수도권이 5만 원 더</span> 받아요.</p>
-      <img class="cell-img" src="../img/32a2a3fa-f6f8-4935-aeef-5a3d11c0b0a5.webp" alt="">
-      <div class="bullets">
-        <div class="bullet-item"><b>기초수급자:</b> 수도권 55만·비수도권 60만 원</div>
-        <div class="bullet-item"><b>차상위·한부모:</b> 수도권 45만·비수도권 50만 원</div>
-        <div class="bullet-item"><b>소득하위 70%:</b> 10만~최대 25만 원</div>
-      </div>
-      <p class="body-text">소득 계층이 불확실하면 <span class="highlight">주민센터에 먼저 확인</span>하세요.</p>
-    </div>
+    <p class="body-text"><span class="highlight">기준 중위소득 100% 이하</span> 시민은 연 48회까지 무료로 이용할 수 있어요.</p>
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>구분</th>
+          <th>내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>무료 대상</th>
+          <td>기준 중위소득 100% 이하, 연 48회까지</td>
+        </tr>
+        <tr>
+          <th>유료 이용</th>
+          <td>그 외 시민, 시간당 6,000원</td>
+        </tr>
+        <tr>
+          <th>이용 한도</th>
+          <td>월 최대 10회, 연간 최대 200시간</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="body-text">2026년 5월부터 <span class="highlight">시간당 요금이 6,000원으로 조정</span>됐어요.</p>
   </div>
   <div class="footer">
     <div class="footer-divider"></div>
