@@ -13,9 +13,9 @@
   }
   .outer {
     position:absolute;
-    width:1080px; height:auto;
-    left:0; top:115.22px;
-    display:flex; flex-direction:column; align-items:center; gap:45.25px;
+    width:936.08px; height:auto;
+    left:72.02px; top:115.22px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:45.25px;
   }
   .headline {
     display:flex; flex-direction:row; align-items:center; gap:14.48px;
@@ -32,13 +32,13 @@
   }
   .hl-badge {
     display:inline-flex; align-items:center; justify-content:center;
-    background:rgba(239,68,82,0.3); border-radius:18.1px;
+    background:rgba(0,154,181,0.2); border-radius:18.1px;
     padding:0 14.48px; height:68.78px;
     font-weight:800; font-size:57.61px;
     letter-spacing:-0.02em; color:#1E2124; line-height:1;
   }
-  .headline-divider {
-    width:1080px; height:9.05px;
+  .content-divider {
+    width:100%; height:9.05px;
     background:#DAE2ED;
     flex-shrink:0;
   }
@@ -59,7 +59,7 @@
   }
   .rank-badge {
     min-width:81.45px; height:65.16px;
-    background:rgba(239,68,82,0.3); border-radius:18.1px;
+    background:rgba(0,154,181,0.2); border-radius:18.1px;
     display:inline-flex; align-items:center; justify-content:center;
     padding:0 16px;
     font-weight:700; font-size:43.44px;
@@ -111,7 +111,7 @@
     <div class="headline">
       {{HEADLINE_HTML}}
     </div>
-    <div class="headline-divider"></div>
+    <div class="content-divider"></div>
     <img class="slide-img" src="{{IMAGE_URL}}" alt="">
     <div class="content-group">
       {{GROUPS_HTML}}

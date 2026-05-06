@@ -12,3 +12,10 @@ runner/image/
 
 # Puppeteer 캐시
 .cache/
+
+# Google Drive 인증 키
+core/drive-key.json
+core/oauth-client.json
+core/oauth-token.json
+cardnews-bot-*.json
+client_secret_*.json
