@@ -112,7 +112,7 @@ top body (1문장) → image(380px) → bullets (3개 이하)
 ## 공통 CSS 규칙
 
 - 캔버스 **1080×1350px** 고정. `overflow:hidden` + `word-break:keep-all`.
-- 외부 CDN: Pretendard 1개만. footer 항상 "시리즈픽". 타이틀 항상 해요체.
+- 외부 CDN: Pretendard 1개만. footer 항상 "고방 | 1인 NEWS". 타이틀 항상 해요체.
 - letter-spacing `-0.02em` (커버만 `-0.05em`).
 - **highlight**: `color:#009AB5; font-weight:700`. 단어·수치 기본, 전환문 전체 허용.
 - **badge 배경**: `rgba(0,154,181,0.2)`. red 금지.
