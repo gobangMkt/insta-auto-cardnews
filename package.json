@@ -6,6 +6,7 @@
     "start": "node runner/server.js",
     "extract": "node core/extract.js",
     "drive": "node core/drive.js",
+    "process": "node core/process.js",
     "auth": "node core/auth.js"
   },
   "dependencies": {

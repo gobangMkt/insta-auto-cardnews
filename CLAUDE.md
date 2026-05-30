@@ -42,3 +42,12 @@ node core/extract.js core/output/{슬러그}
 - agent에게 위임 시 프롬프트에 반드시 포함: "작업 시작 전 `core/templates/gobang-시리즈픽/STYLE.md`를 Read할 것. **반복 실수 방지** 섹션까지 전부 읽어야 함."
 3. `node core/drive.js` 재실행 → 완료 폴더 업로드 → 원본 ZIP 이동.
 - DRIVE_TASK 여러 개면 순서대로 전부 처리.
+
+## 로컬 처리
+
+**"로컬 처리"** 입력 시 즉시 실행. 설명·확인 없이 바로 시작.
+
+1. `node core/process.js` → DRIVE_TASK JSON 파싱. ZIP 없으면 종료.
+2. 각 DRIVE_TASK마다: 타입 확인 → 해당 STYLE.md 읽기 → WebFetch로 URL 읽기 → 이미지 Read → 슬라이드 HTML 생성 → `node core/extract.js core/output/{slug}` → ⚠️ OVERFLOW 경고 슬라이드만 수정 후 재추출
+3. `node core/process.js` 재실행 → `완료/` 폴더에 결과 ZIP 저장 → 원본 ZIP → `대기중/작업완료/` 이동.
+- DRIVE_TASK 여러 개면 순서대로 전부 처리.
