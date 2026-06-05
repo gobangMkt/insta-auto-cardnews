@@ -26,3 +26,5 @@ client_secret_*.json
 
 # 산출물 (생성물 — 커밋 제외)
 core/output/
+대기중/**/*.zip
+완료/**/*.zip
