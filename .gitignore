@@ -20,11 +20,10 @@ core/oauth-token.json
 cardnews-bot-*.json
 client_secret_*.json
 
-# 로컬 처리 폴더 (폴더 구조는 유지, 파일은 무시)
-대기중/*.zip
-완료/*.zip
-
 # 산출물 (생성물 — 커밋 제외)
 core/output/
-대기중/**/*.zip
-완료/**/*.zip
+
+# 로컬 처리 폴더 (산출물·임시 — 내용 전부 무시, 폴더 구조만 .gitkeep로 유지)
+대기중/**
+완료/**
+!**/.gitkeep
