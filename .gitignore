@@ -23,3 +23,6 @@ client_secret_*.json
 # 로컬 처리 폴더 (폴더 구조는 유지, 파일은 무시)
 대기중/*.zip
 완료/*.zip
+
+# 산출물 (생성물 — 커밋 제외)
+core/output/
