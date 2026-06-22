@@ -27,3 +27,5 @@ core/output/
 대기중/**
 완료/**
 !**/.gitkeep
+.agents/
+skills-lock.json
