@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  .canvas {
+    position:relative; width:1080px; height:1350px;
+    overflow:hidden; word-break:keep-all;
+    font-family:'Pretendard','Apple SD Gothic Neo','Noto Sans KR',sans-serif;
+    background:#F8FAFD;
+  }
+  .content-group {
+    position:absolute; width:936.08px; height:auto;
+    left:72.02px; top:115.22px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:43.44px;
+  }
+  .headline {
+    display:flex; flex-direction:row; align-items:center; gap:14.48px;
+    width:933.96px;
+  }
+  .hl-icon {
+    width:63.35px; height:63.35px; flex-shrink:0;
+    display:flex; align-items:center; justify-content:center;
+    font-size:50px; line-height:1;
+  }
+  .headline-text {
+    font-weight:800; font-size:57.61px; line-height:1.2;
+    letter-spacing:-0.02em; color:#1E2124;
+  }
+  .content-divider {
+    width:100%; height:9.05px;
+    background:#DAE2ED; flex-shrink:0;
+  }
+  .highlight { color:#009AB5; font-weight:700; }
+  .body-text {
+    width:936.08px;
+    font-weight:400; font-size:43.44px; line-height:140%;
+    letter-spacing:-0.02em; color:#1E2124;
+  }
+  .img-grid {
+    display:flex; flex-direction:row; gap:18.1px;
+    width:936.08px;
+  }
+  .grid-img {
+    flex:1; height:320px;
+    object-fit:cover; border-radius:18.1px;
+  }
+  .bullets {
+    display:flex; flex-direction:column; gap:18.1px;
+    width:936.08px;
+  }
+  .bullet-item {
+    display:flex; flex-direction:row; align-items:flex-start; gap:14.48px;
+    width:936.08px;
+  }
+  .bullet-dot {
+    width:14.48px; height:14.48px; border-radius:50%;
+    background:#009AB5; flex-shrink:0; margin-top:17px;
+  }
+  .bullet-text {
+    font-weight:400; font-size:39.61px; line-height:140%;
+    letter-spacing:-0.02em; color:#1E2124;
+    flex:1;
+  }
+  .bullet-key { color:#009AB5; font-weight:700; }
+  .footer {
+    position:absolute; width:936.08px; height:61.41px;
+    left:72.02px; bottom:66.61px;
+    display:flex; flex-direction:column; align-items:flex-end; gap:21.61px;
+  }
+  .footer-divider { width:100%; height:1.79px; background:#DAE2ED; }
+  .footer-text {
+    width:100%;
+    display:flex; flex-direction:row; justify-content:space-between; align-items:center;
+  }
+  .footer-label {
+    font-weight:600; font-size:32.41px; line-height:38.01px; color:#BAC5D4;
+  }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="content-group">
+    <div class="headline">
+      <div class="hl-icon">🌿</div>
+      <div class="headline-text">연박으로 계획하면 더 이득이에요</div>
+    </div>
+    <div class="content-divider"></div>
+    <p class="body-text">1박보다 연박이 할인 폭이 훨씬 커요. 어차피 쉬는 여행이라면 하루 더 머무는 게 남는 장사예요.</p>
+    <div class="img-grid">
+      <img class="grid-img" src="../img/cebb607a-a3ca-4724-981d-07f071b0ea96.jpg" alt="여행 풍경 1">
+      <img class="grid-img" src="../img/845207ce-f2bd-46d2-a2bf-079c5e773f12.jpg" alt="여행 풍경 2">
+    </div>
+    <div class="bullets">
+      <div class="bullet-item">
+        <div class="bullet-dot"></div>
+        <span class="bullet-text"><span class="bullet-key">14만 원 이상 연박</span>이면 최대 7만 원 할인 가능해요</span>
+      </div>
+      <div class="bullet-item">
+        <div class="bullet-dot"></div>
+        <span class="bullet-text">1박 할인(최대 3만 원)보다 <span class="bullet-key">2배 이상</span> 더 아낄 수 있어요</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="footer-divider"></div>
+    <div class="footer-text"><span class="footer-label">고방 | 1인 NEWS</span></div>
+  </div>
+</div>
+</body>
+</html>
